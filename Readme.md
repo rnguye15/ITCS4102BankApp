@@ -6,7 +6,7 @@ depositing money into the bank, withdrawing money from the bank, and transferrin
 user. Every transaction is marked with an ID and users can check their balance
 as well as their transaction history within their account.
 
-## Features
+## Key Features
 * Login
 * Register
 * Deposit

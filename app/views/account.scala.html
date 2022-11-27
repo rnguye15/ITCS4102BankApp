@@ -1,0 +1,116 @@
+@()(implicit request: RequestHeader, flash: Flash)
+
+<style>
+  .app-logo {
+    width: 128px;
+    height: 128px;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/2830/2830155.png);
+    background-size: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+
+  .menu-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  }
+
+ .form .sucessmessage {
+    margin: 20px 0 0;
+    color: #90EE90;
+    font-size: 12px;
+  }
+
+  .form h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px
+  }
+
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 20px
+  }
+
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #6782B4;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 10px
+  }
+
+  .form button:hover,.form button:active,.form button:focus {
+    background: #A890FE;
+  }
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+
+  body {
+    background: #76b852; /* fallback for old browsers */
+    background: rgb(141,194,111);
+    background: linear-gradient(90deg, #6782B4 0%, #B1BFD8 50%);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+</style>
+
+<head>
+    <script src="https://kit.fontawesome.com/fc85ac677d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="account-page">
+    <div class="app-logo"></div>
+    <div class="form">
+        <form method="get" action="transaction" class="transaction-form">
+            @helper.CSRF.formField
+            <p class ="sucessmessage">@flash.get("success")</p>
+            <button type="submit">transactions
+                <br>
+                <br>
+                <i class="fa-solid fa-receipt"></i>
+            </button>
+        </form>
+        <form method="get" action="changePass" class="changepass-form">
+            @helper.CSRF.formField
+            <button type="submit">Change Password
+                <br>
+                <br>
+                <i class="fa-solid fa-key"></i>
+            </button>
+        </form>
+        <form method="get" action="back" class="back-form">
+            @helper.CSRF.formField
+            <button type="submit">Back To Main Menu
+                <br>
+                <br>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </form>
+    </div>
+</div>
+</body>

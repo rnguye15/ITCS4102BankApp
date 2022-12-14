@@ -28,11 +28,13 @@ terminal and navigate to the cloned repository. Enter the **sbt** command in the
 the command executes simply type in **run** into the terminal to start the server. The server will be run on localhost
 using port 9000 (http://localhost:9000).
 
-
+## Contributors
+- Special thanks to @Melon for the logo
 ## Authors
 
 - [@rnguye15](https://www.github.com/rnguye15)
 - [@Yruamma](https://www.github.com/Yruamma)
 - [@spancha2](https://www.github.com/spancha2)
 - [@Cindy0806](https://www.github.com/Cindy0806)
+
 
